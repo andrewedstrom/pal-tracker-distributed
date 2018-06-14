@@ -46,7 +46,7 @@ resources:
   type: google-cloud-storage
   source:
     bucket: triage-pal-tracker
-    regexp: green/distributed-artifacts/registration-server-(.*).jar
+    regexp: green/distributed-artifacts/timesheets-server-(.*).jar
     json_key: ((yellow-pal-tracker/Notes/triage-pal-tracker-bucket-gcp-key))
 
 - name: cf
