@@ -75,7 +75,6 @@ public class FlowTest {
     @Test
     public void testBasicFlow() throws Exception {
         HttpClient.Response response;
-
         response = httpClient.get(registrationServerUrl("/"));
         assertThat(response.body).isEqualTo("Noop!");
 
