@@ -29,6 +29,7 @@ run:
       mysql -uroot < databases/create_databases.sql
 
       ./gradlew platform-services:eureka-server:bootRun &
+      sleep 180
       ./gradlew testMigrate clean build || (service mysql stop && exit 1)
 
       cp applications/allocations-server/build/libs/allocations-server.jar ../build-output/allocations-server-`cat ../version/number`.jar
